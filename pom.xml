@@ -50,6 +50,20 @@
 			<version>5.0.6.RELEASE</version>
 		</dependency>
 
+		<!-- JDBC for SQL Server -->
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+			<version>6.4.0.jre8</version>
+		</dependency>
+
+		<!-- C3P0 Pooling Support-->
+		<dependency>
+			<groupId>com.mchange</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>0.9.5.2</version>
+		</dependency>
+
 
 		<!-- Servlet, JSP and JSTL support -->
 		<dependency>

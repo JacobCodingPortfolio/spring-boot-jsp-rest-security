@@ -16,14 +16,21 @@
 
 
         <hr>
-        <!-- Add link to leaders -->
-            <a href="${pageContext.request.contextPath}/leaders">Leader Ship Meeting</a>
-            (Only for manager)
-        <hr>
-        <!-- Add link to admins -->
-            <a href="${pageContext.request.contextPath}/systems">Admin control</a>
-            (Only for Admins)
-        <hr>
+
+        <sec:authorize access = "hasRole('MANAGER')">
+            <!-- Add link to leaders -->
+                <a href="${pageContext.request.contextPath}/leaders">Leader Ship Meeting</a>
+                (Only for manager)
+            <hr>
+        </sec:authorize>
+        <sec:authorize access = "hasRole('ADMIN')">
+            <!-- Add link to admins -->
+                <a href="${pageContext.request.contextPath}/systems">Admin control</a>
+                (Only for Admins)
+            <hr>
+        </sec:authorize>
+
+
         <br>
        <!-- Add a logout button -->
        <form:form action="${pageContext.request.contextPath}/logout"
